@@ -1,0 +1,128 @@
+[
+  {
+    "id": "c608c6ba-45a7-4361-b469-e503c206cb73",
+    "title": "Video Streaming Plus",
+    "amount": 449.55,
+    "currency": "RUB",
+    "category": "entertainment",
+    "next_payment_date": "2026-08-10",
+    "status": "active"
+  },
+  {
+    "id": "d046ef34-96eb-49b4-850a-732f539c81bf",
+    "title": "Music Premium",
+    "amount": 11.27,
+    "currency": "USD",
+    "category": "entertainment",
+    "next_payment_date": "2026-07-14",
+    "status": "active"
+  },
+  {
+    "id": "433728aa-4262-49fe-a260-3c198ec9509f",
+    "title": "Creative Suite Pro",
+    "amount": 52.45,
+    "currency": "USD",
+    "category": "work",
+    "next_payment_date": "2026-08-18",
+    "status": "active"
+  },
+  {
+    "id": "8a4e778b-51f1-461a-bfb1-5f658f7758fd",
+    "title": "Marketplace Plus",
+    "amount": 236.75,
+    "currency": "RUB",
+    "category": "marketplace",
+    "next_payment_date": "2026-08-01",
+    "status": "active"
+  },
+  {
+    "id": "cf7dd3db-6af9-4322-ada5-073900294f2d",
+    "title": "AI Assistant Pro",
+    "amount": 40,
+    "currency": "USD",
+    "category": "work",
+    "next_payment_date": "2026-07-15",
+    "status": "active"
+  },
+  {
+    "id": "8a7d0e2d-ae63-408d-822a-105672d80a00",
+    "title": "Office Suite Personal",
+    "amount": 9.99,
+    "currency": "GBP",
+    "category": "work",
+    "next_payment_date": "2026-08-21",
+    "status": "active"
+  },
+  {
+    "id": "c334ee05-9029-4c9c-b256-3872b26f9a02",
+    "title": "Design Tool Pro",
+    "amount": 28,
+    "currency": "USD",
+    "category": "work",
+    "next_payment_date": "2026-08-25",
+    "status": "active"
+  },
+  {
+    "id": "8af87cab-15a4-480a-9332-8456e718aa2b",
+    "title": "Online Library",
+    "amount": 459,
+    "currency": "RUB",
+    "category": "education",
+    "next_payment_date": "2026-08-11",
+    "status": "active"
+  },
+  {
+    "id": "acfbc954-e3d0-408f-bacc-a83cc7927705",
+    "title": "Language Learning Pro",
+    "amount": 18.89,
+    "currency": "EUR",
+    "category": "education",
+    "next_payment_date": "2026-07-16",
+    "status": "active"
+  },
+  {
+    "id": "9fd8ebe6-d1a0-4fe7-a051-9a074199d5d3",
+    "title": "Video Call Pro",
+    "amount": 16.99,
+    "currency": "USD",
+    "category": "work",
+    "next_payment_date": "2026-08-29",
+    "status": "active"
+  },
+  {
+    "id": "f6cf1c55-1560-4ca7-bfdc-c26b362d7f22",
+    "title": "Audio Streaming",
+    "amount": 250.35,
+    "currency": "RUB",
+    "category": "entertainment",
+    "next_payment_date": "2026-08-16",
+    "status": "active"
+  },
+  {
+    "id": "4b0a2a3b-23c0-4547-8ac6-8a8bf2607648",
+    "title": "Cloud Gaming",
+    "amount": 1499,
+    "currency": "RUB",
+    "category": "entertainment",
+    "next_payment_date": "2026-08-20",
+    "status": "active"
+  },
+  {
+    "id": "9fc08e91-f164-46de-b2f9-ccb808a27db9",
+    "title": "Photo Editor Plus",
+    "amount": 9.99,
+    "currency": "USD",
+    "category": "work",
+    "next_payment_date": "2026-08-15",
+    "status": "canceled"
+  },
+  {
+    "id": "4f002e02-2cff-4ac6-a40e-5ab1de051e9c",
+    "title": "Movie Premium",
+    "amount": 5.99,
+    "currency": "EUR",
+    "category": "entertainment",
+    "next_payment_date": "2026-08-17",
+    "status": "canceled"
+  }
+]
