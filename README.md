@@ -8,10 +8,13 @@ git clone https://github.com/daniel-markin/Smart-Registry-For-Subscriptions.git 
 1. Переменные для LLM задаются в файле .env, который необходимо создать в корне проекта:
 ```bash
 GIGACHAT_CREDENTIALS=
-GIGACHAT_SCOPE=
-GIGACHAT_VERIFY_SSL_CERTS=
-GIGACHAT_MODEL=
+GIGACHAT_SCOPE=GIGACHAT_API_PERS
+GIGACHAT_VERIFY_SSL_CERTS=False
+GIGACHAT_MODEL=GigaChat-Max
 ```
+Необходимо указать значение для переменной GIGACHAT_CREDENTIALS, которая хранит ключ для доступа к GigaChat API.
+Документация для получения ключа: https://developers.sber.ru/docs/ru/gigachat/quickstart/ind-create-project
+
 2. Затем необходимо загрузить переменные из .env:
 ```bash
 set -a
@@ -30,6 +33,9 @@ docker compose run --rm app python main.py "Какая категория обх
 ```bash
 docker compose run --rm app python main.py "Есть ли у меня платежи на этой неделе?"
 ```
+
+## 2. Выбранная LLM:
+GigaChat Max. Именно эта модель была выбрана, поскольку она является одной из самых передовых российских LLM и отлично работает с текстами на русском языке.
 
 ## 3. Пример полного ReAct-трейса для запроса: "Сколько я потрачу в ближайшие 30 дней? Покажи итог в рублях.":
 ```text
