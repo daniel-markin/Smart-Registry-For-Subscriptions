@@ -35,7 +35,7 @@ def obligations_data():
         },
     ]
 
-
+# Проверяет, что get_obligations возвращает все записи без фильтрации.
 def test_get_obligations_returns_all_records(monkeypatch, tmp_path, obligations_data):
     data_file = tmp_path / "obligations.json"
     data_file.write_text(json.dumps(obligations_data), encoding="utf-8")
@@ -48,7 +48,7 @@ def test_get_obligations_returns_all_records(monkeypatch, tmp_path, obligations_
     assert result[1]["title"] == "Music Premium"
     assert result[2]["title"] == "Photo Editor Plus"
 
-
+# Проверяет, что get_obligations корректно фильтрует записи по статусу.
 def test_get_obligations_filters_by_status(monkeypatch, tmp_path, obligations_data):
     data_file = tmp_path / "obligations.json"
     data_file.write_text(json.dumps(obligations_data), encoding="utf-8")
@@ -59,7 +59,7 @@ def test_get_obligations_filters_by_status(monkeypatch, tmp_path, obligations_da
     assert len(result) == 2
     assert all(item["status"] == "active" for item in result)
 
-
+# Проверяет, что get_obligations корректно фильтрует записи по статусу и категории.
 def test_get_obligations_filters_by_status_and_category(monkeypatch, tmp_path, obligations_data):
     data_file = tmp_path / "obligations.json"
     data_file.write_text(json.dumps(obligations_data), encoding="utf-8")
