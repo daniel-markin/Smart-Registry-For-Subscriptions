@@ -20,8 +20,10 @@ from src.agent_tools import (
 )
 from src.logging_callbacks import ConsoleTraceCallbackHandler
 
+
 def _get_today() -> date:
     return date.today()
+
 
 def _extract_period_days(text: str) -> int | None:
     match = re.search(r"(\d+)\s*(дн|дня|дней)", text.lower())
@@ -30,12 +32,12 @@ def _extract_period_days(text: str) -> int | None:
     return None
 
 
-def _build_date_bounds(user_input: str) -> tuple[str, str]:
+def _build_date_bounds(user_input: str) -> tuple[str | None, str | None]:
     today = _get_today()
     period_days = _extract_period_days(user_input)
-    date_from = today.isoformat()
-    date_to = (today + timedelta(days=period_days)).isoformat()
-    return date_from, date_to
+    if period_days is None:
+        return None, None
+    return today.isoformat(), (today + timedelta(days=period_days)).isoformat()
 
 
 def build_agent_executor(user_input: str | None = None) -> AgentExecutor:
@@ -58,9 +60,17 @@ def build_agent_executor(user_input: str | None = None) -> AgentExecutor:
         tool_has_items,
     ]
 
-    today = date(2026, 7, 11)
+    today = _get_today()
     date_from, date_to = _build_date_bounds(user_input or "")
     target_currency = "RUB"
+
+    date_block = ""
+    if date_from and date_to:
+        date_block = f"""
+Если пользователь спрашивает про сумму в ближайшие N дней, используйте диапазон:
+date_from = {date_from}
+date_to = {date_to}
+"""
 
     prompt = ChatPromptTemplate.from_messages(
         [
@@ -71,9 +81,7 @@ def build_agent_executor(user_input: str | None = None) -> AgentExecutor:
 расчёта дат списаний и контроля статуса подписок пользователя
 
 Текущая дата: {today.isoformat()}.
-Если пользователь спрашивает про сумму в ближайшие N дней, используйте диапазон:
-date_from = {date_from}
-date_to = {date_to}
+{date_block}
 
 Если пользователь явно просит итог в валюте, используйте целевую валюту:
 target_currency = {target_currency}

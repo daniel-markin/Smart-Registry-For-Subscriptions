@@ -15,5 +15,5 @@ if __name__ == "__main__":
     conversation_id = f"conv_{uuid.uuid4().hex}"
     set_current_conversation_id(conversation_id)
 
-    executor = build_agent_executor()
+    executor = build_agent_executor(user_input)
     result = executor.invoke({"input": user_input})
